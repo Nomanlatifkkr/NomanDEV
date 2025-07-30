@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PortfolioCard from './PortfolioCard';
 import PortfolioModal from './PortfolioModal';
+import { project1, project2, project3, project4, project5, project8 } from '../../assets';
 
 const Portfolio = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -12,7 +13,7 @@ const Portfolio = () => {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React & Node.js",
       tags: ["React", "Node.js", "MongoDB"],
-      image: "/projects/ecommerce.jpg",
+      image: project2,
       demoUrl: "#",
       codeUrl: "#"
     },
@@ -21,7 +22,7 @@ const Portfolio = () => {
       title: "Social Media Dashboard",
       description: "Analytics dashboard with real-time data visualization",
       tags: ["Next.js", "Tailwind", "Firebase"],
-      image: "/projects/dashboard.jpg",
+      image: project3,
       demoUrl: "#",
       codeUrl: "#"
     },
@@ -30,7 +31,7 @@ const Portfolio = () => {
       title: "Mobile Fitness App",
       description: "Cross-platform fitness tracking application",
       tags: ["React Native", "GraphQL", "AWS"],
-      image: "/projects/fitness.jpg",
+      image: project4,
       demoUrl: "#",
       codeUrl: "#"
     },
@@ -39,7 +40,7 @@ const Portfolio = () => {
       title: "AI Content Generator",
       description: "GPT-3 powered content creation tool",
       tags: ["Next.js", "OpenAI", "Node.js"],
-      image: "/projects/ai-tool.jpg",
+      image: project5,
       demoUrl: "#",
       codeUrl: "#"
     },
@@ -48,7 +49,7 @@ const Portfolio = () => {
       title: "Cryptocurrency Tracker",
       description: "Real-time crypto price tracking dashboard",
       tags: ["React", "CoinGecko API", "Firebase"],
-      image: "/projects/crypto.jpg",
+      image: project1,
       demoUrl: "#",
       codeUrl: "#"
     },
@@ -57,7 +58,7 @@ const Portfolio = () => {
       title: "Travel Booking Platform",
       description: "Hotel and flight booking web application",
       tags: ["Next.js", "MongoDB", "Stripe"],
-      image: "/projects/travel.jpg",
+      image: project8,
       demoUrl: "#",
       codeUrl: "#"
     }
@@ -129,6 +130,7 @@ const Portfolio = () => {
           )}
         </AnimatePresence>
       </div>
+     
     </section>
   );
 };

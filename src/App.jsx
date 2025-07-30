@@ -8,6 +8,7 @@ import About from './components/AboutusSession/About';
 import Services from './components/ServicesSession/Services';
 import Portfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contactus/Contact';
+import Footer from './components/commons/Footer';
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <CustomCursor />
 
       {/* Page Content */}
-      <main className="relative z-0 text-white min-h-screen font-urbanist overflow-hidden">
+      <main className="relative z-0 text-white min-h-screen font-urbanist overflow-hidden scroll-smooth">
         {/* Header */}
         <Header />
 
@@ -67,6 +68,7 @@ const App = () => {
         <Services/>
         <Portfolio/>
         <Contact/>
+        <Footer/>
       </main>
     </>
   );

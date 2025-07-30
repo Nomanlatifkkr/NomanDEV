@@ -22,6 +22,7 @@
 @layer base {
   html {
     font-family: var(--font-urbanist);
+    scroll-behavior: smooth;
   }
   body {
     background-color: var(--color-dark);

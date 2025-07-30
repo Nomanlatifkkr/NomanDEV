@@ -14,14 +14,14 @@ const MobileMenu = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-dark/95 backdrop-blur-lg z-40 pt-24 md:hidden"
+          className="fixed inset-0 bg-dark/950 backdrop-blur-lg z-40 pt-24 md:hidden"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.3 }}
         >
           <motion.nav 
-            className="flex flex-col items-center space-y-8 px-6"
+            className="flex flex-col items-center space-y-8 px-6 bg-dark/95 "
             initial="hidden"
             animate="visible"
             variants={{
