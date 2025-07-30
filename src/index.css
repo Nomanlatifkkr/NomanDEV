@@ -1,1 +1,61 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+/* THEME VARIABLES */
+@theme {
+  /* Fonts */
+  --font-urbanist: "Urbanist", sans-serif;
+
+  /* Colors */
+  --color-primary: oklch(0.72 0.18 150);     /* Neon Green */
+  --color-dark: oklch(0.2 0.01 240);         /* #000000 dark background */
+  --color-light: oklch(0.98 0.01 240);       /* Light text color */
+  --color-accent: oklch(0.75 0.16 270);      /* Purplish accent */
+  --color-gradient-start: oklch(0.95 0.1 250); /* Soft Blue/Pink */
+  --color-gradient-end: oklch(0.98 0.1 40);    /* Peach/Coral */
+
+  /* Shadows */
+  --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* BASE STYLES */
+@layer base {
+  html {
+    font-family: var(--font-urbanist);
+  }
+  body {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+.cursor-hovered {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: var(--color-primary);
+  border: none !important;
+}
+/* Enhanced cursor styles */
+.cursor-hover-target {
+  transition: transform 0.2s ease;
+}
+
+.cursor-hover-target:hover {
+  transform: translateY(-2px);
+}
+
+/* For text elements that should change cursor */
+.cursor-text-target {
+  position: relative;
+}
+
+.cursor-text-target:hover::after {
+  content: attr(data-cursor-text);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--color-primary);
+}
